@@ -1,0 +1,97 @@
+*** SPICE deck for cell inverter{sch} from library inv
+*** Created on Sun Nov 01, 2026 09:58:55
+*** Last revised on Sun Nov 01, 2026 12:31:06
+*** Written on Sun Nov 01, 2026 12:32:44 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: inverter{sch}
+MNMOS out in gnd gnd CMOSN L=1U W=0.25U
+MPMOS vdd in out vdd CMOSP L=2U W=0.25U
+
+Vdd vdd gnd 3
+Vpulse in gnd PULSE(0 3 1n 1n 1n 6.25n 12.5n)
+.tran 50ns
+
+
+
+* RUN: T37B (MM_NON-EPI)	VENDOR: TSMC
+* TECHNOLOGY: SCN025			FEATURE SIZE: 0.25 microns
+* T37B SPICE BSIM3 VERSION 3.1 PARAMETERS
+* SPICE 3f5 Level 8, Star-HSPICE Level 49, UTMOST Level 8
+* DATE: Sep 17/03
+* LOT: T37B                  WAF: 0002
+* Temperature_parameters=Default
+.MODEL CMOSN NMOS (                                LEVEL   = 49
++VERSION = 3.1            TNOM    = 27             TOX     = 5.7E-9
++XJ      = 1E-7           NCH     = 2.3549E17      VTH0    = 0.3730635
++K1      = 0.4737692      K2      = 4.116406E-5    K3      = 1E-3
++K3B     = 1.7999035      W0      = 1E-7           NLX     = 1.740604E-7
++DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
++DVT0    = 0.4350667      DVT1    = 0.5819313      DVT2    = -0.5
++U0      = 282.6382765    UA      = -1.459113E-9   UB      = 2.666853E-18
++UC      = 3.876176E-11   VSAT    = 1.369009E5     A0      = 1.7826131
++AGS     = 0.3272708      B0      = -7.702255E-9   B1      = -1E-7
++KETA    = -8.593406E-3   A1      = 1.899746E-4    A2      = 0.4721967
++RDSW    = 200            PRWG    = 0.2843144      PRWB    = -0.2
++WR      = 1              WINT    = 0              LINT    = 1.584238E-9
++XL      = 0              XW      = -4E-8          DWG     = -7.786168E-9
++DWB     = 6.299903E-9    VOFF    = -0.0967223     NFACTOR = 1.429191
++CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
++CDSCB   = 0              ETA0    = 2.584237E-3    ETAB    = 1.060555E-4
++DSUB    = 0.0117695      PCLM    = 2.1515753      PDIBLC1 = 1
++PDIBLC2 = 2.145825E-3    PDIBLCB = 0.0471159      DROUT   = 1
++PSCBE1  = 2.386732E8     PSCBE2  = 7.052974E-8    PVAG    = 4.599408E-3
++DELTA   = 0.01           RSH     = 4              MOBMOD  = 1
++PRT     = 0              UTE     = -1.5           KT1     = -0.11
++KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
++UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
++WL      = 0              WLN     = 1              WW      = 0
++WWN     = 1              WWL     = 0              LL      = 0
++LLN     = 1              LW      = 0              LWN     = 1
++LWL     = 0              CAPMOD  = 2              XPART   = 0.5
++CGDO    = 5.83E-10       CGSO    = 5.83E-10       CGBO    = 1E-12
++CJ      = 1.761007E-3    PB      = 0.99           MJ      = 0.4688965
++CJSW    = 4.015945E-10   PBSW    = 0.99           MJSW    = 0.3271876
++CJSWG   = 3.29E-10       PBSWG   = 0.99           MJSWG   = 0.3271876
++CF      = 0              PVTH0   = -6.465496E-3   PRDSW   = -10
++PK2     = 3.1412E-3      WKETA   = 6.591068E-3    LKETA   = 3.835101E-3     )
+*
+.MODEL CMOSP PMOS (                                LEVEL   = 49
++VERSION = 3.1            TNOM    = 27             TOX     = 5.7E-9
++XJ      = 1E-7           NCH     = 4.1589E17      VTH0    = -0.5631257
++K1      = 0.6419605      K2      = -7.282264E-4   K3      = 0
++K3B     = 7.915875       W0      = 1E-6           NLX     = 2.685026E-8
++DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
++DVT0    = 3.1945843      DVT1    = 1              DVT2    = -0.1117614
++U0      = 101.3073694    UA      = 1.041625E-9    UB      = 1E-21
++UC      = -1E-10         VSAT    = 1.425879E5     A0      = 1.1063182
++AGS     = 0.2045858      B0      = 1.017974E-6    B1      = 5E-6
++KETA    = 0.0111427      A1      = 0.0109159      A2      = 0.3
++RDSW    = 2.014607E3     PRWG    = -0.03098       PRWB    = -0.0309254
++WR      = 1              WINT    = 0              LINT    = 4.068013E-8
++XL      = 0              XW      = -4E-8          DWG     = -2.666714E-8
++DWB     = 3.702655E-9    VOFF    = -0.1370541     NFACTOR = 1.2435282
++CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
++CDSCB   = 0              ETA0    = 0.2653362      ETAB    = -0.0830656
++DSUB    = 1.2359917      PCLM    = 1.3932016      PDIBLC1 = 4.033555E-3
++PDIBLC2 = -4.055943E-9   PDIBLCB = -1E-3          DROUT   = 0.0602572
++PSCBE1  = 2.392979E10    PSCBE2  = 2.163848E-9    PVAG    = 0.0141131
++DELTA   = 0.01           RSH     = 3              MOBMOD  = 1
++PRT     = 0              UTE     = -1.5           KT1     = -0.11
++KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
++UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
++WL      = 0              WLN     = 1              WW      = 0
++WWN     = 1              WWL     = 0              LL      = 0
++LLN     = 1              LW      = 0              LWN     = 1
++LWL     = 0              CAPMOD  = 2              XPART   = 0.5
++CGDO    = 6.76E-10       CGSO    = 6.76E-10       CGBO    = 1E-12
++CJ      = 1.893734E-3    PB      = 0.9889579      MJ      = 0.4705132
++CJSW    = 3.124347E-10   PBSW    = 0.8            MJSW    = 0.2786992
++CJSWG   = 2.5E-10        PBSWG   = 0.8            MJSWG   = 0.2786992
++CF      = 0              PVTH0   = 4.821637E-3    PRDSW   = -2.2211772
++PK2     = 2.088108E-3    WKETA   = 0.0199978      LKETA   = -5.605069E-3    )
+*
+.END
