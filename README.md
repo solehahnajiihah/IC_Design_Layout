@@ -7,4 +7,4 @@ Two introductory transistor-level CMOS gate projects created in Electric VLSI, w
 | CMOS NOT | `Y = ¬A` | [Design and truth table](CMOS%20NOT/README.md) |
 | Two-input CMOS NAND | `Y = ¬(A · B)` | [Design and truth table](CMOS%20NAND/README.md) |
 
-The Electric source libraries are [`inv.jelib`](inv.jelib) and [`nand.jelib`](nand.jelib). Each project README lists its simulation files, setup, and current verification limits.
+Each project README lists its simulation files, setup, and current verification limits.
