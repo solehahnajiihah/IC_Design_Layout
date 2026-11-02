@@ -1,0 +1,19 @@
+LTspice 26.1.1 for Windows
+Circuit: C:\Users\SOLEHA\Downloads\electric-vlsi\CMOS inverter\inv_layout.spi
+Start Time: Sun Nov  1 12:21:52 2026
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+solver = Normal
+Maximum thread count: 24
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.027 seconds.
+Total iterations: 2193
+
+Files loaded:
+C:\Users\SOLEHA\Downloads\electric-vlsi\CMOS inverter\inv_layout.spi
+
